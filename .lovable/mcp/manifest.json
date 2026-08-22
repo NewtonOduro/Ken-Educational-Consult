@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://maegiijiniuvfpfqrfnt.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "dream-abroad-agency",
+      "version": "0.1.0",
+      "title": "Dream Abroad Agency"
+    },
+    "tools": [
+      {
+        "name": "check_availability",
+        "title": "Check consultation availability",
+        "description": "List the consultation slots already taken between two dates (YYYY-MM-DD), so free times can be offered to a client.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "from_date": {
+              "type": "string",
+              "description": "Start date, YYYY-MM-DD."
+            },
+            "to_date": {
+              "type": "string",
+              "description": "End date, YYYY-MM-DD."
+            }
+          },
+          "required": [
+            "from_date",
+            "to_date"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_performance_summary",
+        "title": "Get performance summary",
+        "description": "Aggregate conversion numbers for the consultancy: bookings, upcoming sessions, tracked interactions and enquiry volume. No client contact details. Available to staff and admin accounts.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_bookings",
+        "title": "List consultation bookings",
+        "description": "List consultation bookings with client contact details. Admin accounts only; staff accounts get counts through get_performance_summary instead.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "description": "How many bookings to return (1-50)."
+            },
+            "upcoming_only": {
+              "type": "boolean",
+              "description": "True to return only bookings from today onwards."
+            }
+          },
+          "required": [
+            "limit",
+            "upcoming_only"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_enquiries",
+        "title": "List website enquiries",
+        "description": "List enquiries submitted through the website contact form, including the sender's contact details. Admin accounts only.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "description": "How many enquiries to return (1-50)."
+            }
+          },
+          "required": [
+            "limit"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

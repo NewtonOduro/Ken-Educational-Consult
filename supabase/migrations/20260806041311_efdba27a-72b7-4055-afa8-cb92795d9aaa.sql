@@ -1,0 +1,1 @@
+DELETE FROM public.bookings WHERE email = 'sec@test.com' AND full_name = 'Sec Test';
