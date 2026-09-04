@@ -14,7 +14,7 @@ export default defineTool({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: async ({ limit, upcoming_only }, ctx) => {
     const role = await resolveStaffRole(ctx);
-    if (!role) return deniedResult("Only PACIFIC EDU CONSULT team accounts can use this tool.");
+    if (!role) return deniedResult("Only Ken Educational Consult team accounts can use this tool.");
     if (role !== "admin") {
       return deniedResult(
         "Client contact details are restricted to admin accounts. Use get_performance_summary for aggregate numbers.",

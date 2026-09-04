@@ -7,11 +7,7 @@ import { track } from "@/lib/analytics";
 import { openWhatsApp } from "@/lib/whatsapp";
 import heroImage from "@/assets/hero.jpg";
 
-const PROOF = [
-  "Free eligibility check",
-  "Scholarship guidance",
-  "Full visa document support",
-];
+const PROOF = ["Free eligibility check", "Scholarship guidance", "Full visa document support"];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -26,11 +22,15 @@ export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (videoRef.current) {
+    const playVideo = () => {
+      if (!videoRef.current) return;
+      videoRef.current.muted = true;
       videoRef.current.play().catch((error) => {
         console.log("Autoplay was prevented by browser:", error);
       });
-    }
+    };
+
+    playVideo();
   }, []);
 
   return (
@@ -44,14 +44,22 @@ export function Hero() {
         loop
         playsInline
         preload="auto"
+        disablePictureInPicture
+        webkit-playsinline="true"
         aria-hidden="true"
+        onCanPlay={() => {
+          if (videoRef.current) {
+            videoRef.current.muted = true;
+            videoRef.current.play().catch((err) => console.log("Replay error:", err));
+          }
+        }}
         onEnded={() => {
           if (videoRef.current) {
             videoRef.current.currentTime = 0;
             videoRef.current.play().catch((err) => console.log("Replay error:", err));
           }
         }}
-        className="absolute inset-0 -z-20 size-full object-cover object-center"
+        className="pointer-events-none absolute inset-0 -z-20 size-full object-cover object-center"
       />
       <div className="from-black/95 via-black/80 to-black/60 absolute inset-0 -z-10 bg-gradient-to-r" />
 
@@ -84,8 +92,8 @@ export function Hero() {
           animate="show"
           className="text-navy-foreground/85 mx-auto mt-6 max-w-2xl text-base leading-relaxed sm:text-lg"
         >
-          From university admissions and visa assistance to international travel planning,
-          PACIFIC EDU CONSULT helps you confidently achieve your dreams abroad.
+          From university admissions and visa assistance to international travel planning, Ken
+          Educational Consult helps you confidently achieve your dreams abroad.
         </motion.p>
 
         <motion.div

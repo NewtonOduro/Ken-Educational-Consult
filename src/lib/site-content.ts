@@ -1,25 +1,18 @@
-import {
-  GraduationCap,
-  Stamp,
-  Plane,
-  BookOpenCheck,
-  Landmark,
-  Briefcase,
-} from "lucide-react";
+import { GraduationCap, Stamp, Plane, BookOpenCheck, Landmark, Briefcase } from "lucide-react";
 
 export const BUSINESS = {
-  name: "PACIFIC EDU CONSULT",
+  name: "Ken Educational Consult",
   tagline: "Study • Travel • Global Opportunities",
   address: "Atonsu S' Line Junction, AK-376-2269, Kumasi, Ghana",
   phoneHref: "tel:+233544728988",
-  whatsapp: "https://wa.me/233544728988?text=Hello%20PACIFIC%20EDU%20CONSULT%2C%20I%27d%20like%20a%20free%20consultation.",
-  website: "pacificeduconsult.com",
-  email: "info@pacificeduconsult.com",
+  whatsapp:
+    "https://wa.me/233544728988?text=Hello%20Ken%20Educational%20Consult%2C%20I%27d%20like%20a%20free%20consultation.",
+  website: "keneducationalconsult.com",
+  email: "info@keneducationalconsult.com",
   mapsEmbed:
     "https://www.openstreetmap.org/export/embed.html?bbox=-1.6206%2C6.6328%2C-1.5806%2C6.6728&layer=mapnik&marker=6.6528%2C-1.6006",
   mapsLink:
     "https://www.google.com/maps/dir/?api=1&destination=Atonsu+S+Line+Junction%2C+Kumasi%2C+Ghana",
-
 } as const;
 
 export const SERVICES = [
@@ -122,7 +115,7 @@ export const STATS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "PACIFIC EDU CONSULT made my dream of studying in Canada a reality. The process was smooth, and their support was outstanding.",
+      "Ken Educational Consult made my dream of studying in Canada a reality. The process was smooth, and their support was outstanding.",
     name: "Akosua Mensah",
     role: "MSc Student, Toronto 🇨🇦",
     initials: "AM",

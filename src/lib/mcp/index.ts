@@ -11,7 +11,7 @@ export default defineMcp({
   title: "Dream Abroad Agency",
   version: "0.1.0",
   instructions:
-    "Tools for the PACIFIC EDU CONSULT travel and study-abroad consultancy. Use check_availability before proposing consultation times, get_performance_summary for aggregate conversion numbers (staff and admin), and list_bookings / list_enquiries for client contact details (admin accounts only).",
+    "Tools for the Ken Educational Consult travel and study-abroad consultancy. Use check_availability before proposing consultation times, get_performance_summary for aggregate conversion numbers (staff and admin), and list_bookings / list_enquiries for client contact details (admin accounts only).",
   auth: auth.oauth.issuer({
     issuer: `https://${projectRef}.supabase.co/auth/v1`,
     acceptedAudiences: "authenticated",
@@ -24,5 +24,4 @@ export default defineMcp({
     listBookingsTool,
     listEnquiriesTool,
   ] as unknown as Parameters<typeof defineMcp>[0]["tools"],
-
 });

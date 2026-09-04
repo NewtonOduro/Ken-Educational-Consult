@@ -1,9 +1,9 @@
 # Global Gateway
 
 Build an sexy modern day websites using this information that will attract more customers and user to this business
-10/10 AI Prompt – PACIFIC EDU CONSULT (Premium Travel & Study Abroad Website)
+10/10 AI Prompt – Ken Educational Consult (Premium Travel & Study Abroad Website)
 
-Create a premium, modern, trustworthy, and conversion-focused website for PACIFIC EDU CONSULT, a professional travel and educational consultancy based in Atonsu S' Line Junction, Kumasi, Ghana.
+Create a premium, modern, trustworthy, and conversion-focused website for Ken Educational Consult, a professional travel and educational consultancy based in Atonsu S' Line Junction, Kumasi, Ghana.
 
 The website should instantly build trust, attract students, travelers, parents, and professionals, and encourage visitors to contact the agency or book a consultation.
 
@@ -59,7 +59,7 @@ Your Journey to Study, Travel & Global Opportunities Starts Here.
 
 Subheading:
 
-"From university admissions and visa assistance to international travel planning, PACIFIC EDU CONSULT helps you confidently achieve your dreams abroad."
+"From university admissions and visa assistance to international travel planning, Ken Educational Consult helps you confidently achieve your dreams abroad."
 
 CTA Buttons:
 
@@ -163,7 +163,7 @@ Dubai 🇦🇪
 
 China 🇨🇳
 
-Why Choose PACIFIC EDU CONSULT
+Why Choose Ken Educational Consult
 
 Use animated feature cards.
 
@@ -189,7 +189,7 @@ Display student testimonials with profile pictures.
 
 Example:
 
-"PACIFIC EDU CONSULT made my dream of studying in Canada a reality. The process was smooth, and their support was outstanding."
+"Ken Educational Consult made my dream of studying in Canada a reality. The process was smooth, and their support was outstanding."
 
 ★★★★★
 
@@ -251,13 +251,13 @@ Contact Section
 
 Display prominently:
 
-PACIFIC EDU CONSULT
+Ken Educational Consult
 
 📍 Atonsu S' Line Junction, AK-376-2269, Kumasi, Ghana
 
 📞 054 472 8988
 
-🌐 pacificeduconsult.com
+🌐 keneducationalconsult.com
 
 Include:
 
@@ -309,7 +309,7 @@ Your Future Has No Borders.
 
 Subheading:
 
-"Whether you dream of studying abroad, traveling internationally, or building a global career, PACIFIC EDU CONSULT is here to guide you every step of the way."
+"Whether you dream of studying abroad, traveling internationally, or building a global career, Ken Educational Consult is here to guide you every step of the way."
 
 Buttons:
 

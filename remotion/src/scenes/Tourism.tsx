@@ -1,14 +1,6 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
-import {
-  Backdrop,
-  Eyebrow,
-  Gold,
-  Headline,
-  Particles,
-  Sub,
-  useSpringIn,
-} from "../components/kit";
+import { Backdrop, Eyebrow, Gold, Headline, Particles, Sub, useSpringIn } from "../components/kit";
 import { C } from "../theme";
 import { BODY } from "../fonts";
 
@@ -127,7 +119,9 @@ const Card: React.FC<{ i: number; name: string; label: string; Art: React.FC }> 
       <svg width="120" height="116" viewBox="0 0 120 116">
         <Art />
       </svg>
-      <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.white, marginTop: 8 }}>
+      <div
+        style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.white, marginTop: 8 }}
+      >
         {name}
       </div>
       <div

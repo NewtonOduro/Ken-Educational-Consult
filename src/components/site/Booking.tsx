@@ -81,14 +81,12 @@ export function Booking() {
     staleTime: 60_000,
   });
 
-
   const takenForDay = useMemo(() => {
     if (!date) return new Set<string>();
     const key = toDateKey(date);
     return new Set(
       (taken as BookedSlot[]).filter((s) => s.slot_date === key).map((s) => s.slot_time),
     );
-
   }, [taken, date]);
 
   const mutation = useMutation({
@@ -203,9 +201,7 @@ export function Booking() {
               <Row label="Time" value={formatSlotTime(confirmed.time)} />
               <Row
                 label="Mode"
-                value={
-                  MEETING_MODES.find((m) => m.id === mode)?.label ?? "At the Kumasi office"
-                }
+                value={MEETING_MODES.find((m) => m.id === mode)?.label ?? "At the Kumasi office"}
               />
             </dl>
             <div className="mt-8 grid gap-2.5 sm:grid-cols-2">
@@ -308,7 +304,8 @@ export function Booking() {
                               time === slot
                                 ? "border-gold bg-gold text-gold-foreground"
                                 : "border-border bg-background hover:border-gold/60",
-                              disabled && "text-muted-foreground cursor-not-allowed line-through opacity-50",
+                              disabled &&
+                                "text-muted-foreground cursor-not-allowed line-through opacity-50",
                             )}
                           >
                             {formatSlotTime(slot)}
@@ -335,10 +332,11 @@ export function Booking() {
             <p className="text-muted-foreground mt-3 text-sm">
               {date && time ? (
                 <span className="text-foreground font-medium">
-                  {selectedType.title} · {new Date(`${toDateKey(date)}T00:00:00`).toLocaleDateString(
-                    undefined,
-                    { day: "numeric", month: "short" },
-                  )}{" "}
+                  {selectedType.title} ·{" "}
+                  {new Date(`${toDateKey(date)}T00:00:00`).toLocaleDateString(undefined, {
+                    day: "numeric",
+                    month: "short",
+                  })}{" "}
                   at {formatSlotTime(time)}
                 </span>
               ) : (

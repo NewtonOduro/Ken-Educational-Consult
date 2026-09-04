@@ -164,7 +164,7 @@ export const Flights: React.FC = () => {
             justifyContent: "space-between",
           }}
         >
-          <span>Passenger · PACIFIC EDU CONSULT</span>
+          <span>Passenger · Ken Educational Consult</span>
           <span>Seat 12A</span>
         </div>
       </div>

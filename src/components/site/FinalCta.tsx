@@ -24,7 +24,7 @@ export function FinalCta() {
         </h2>
         <p className="text-navy-foreground/80 mx-auto mt-6 max-w-2xl text-base leading-relaxed sm:text-lg">
           Whether you dream of studying abroad, traveling internationally, or building a global
-          career, PACIFIC EDU CONSULT is here to guide you every step of the way.
+          career, Ken Educational Consult is here to guide you every step of the way.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <Button asChild variant="gold" size="xl">

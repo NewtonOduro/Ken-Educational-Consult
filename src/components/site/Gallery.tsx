@@ -6,7 +6,11 @@ import campus from "@/assets/campus.jpg";
 import traveler from "@/assets/traveler.jpg";
 
 const IMAGES = [
-  { src: hero, alt: "Graduating international students celebrating at an airport", span: "sm:col-span-2 sm:row-span-2" },
+  {
+    src: hero,
+    alt: "Graduating international students celebrating at an airport",
+    span: "sm:col-span-2 sm:row-span-2",
+  },
   { src: visa, alt: "Approved visa inside a passport with an airline boarding pass" },
   { src: campus, alt: "University campus quad with students walking between lectures" },
   { src: counseling, alt: "Counselling session between a consultant and a student" },

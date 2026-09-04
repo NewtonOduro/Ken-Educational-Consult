@@ -10,7 +10,7 @@ export default defineTool({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: async (_input, ctx) => {
     const role = await resolveStaffRole(ctx);
-    if (!role) return deniedResult("Only PACIFIC EDU CONSULT team accounts can use this tool.");
+    if (!role) return deniedResult("Only Ken Educational Consult team accounts can use this tool.");
 
     const supabase = await supabaseTrusted();
     const today = new Date().toISOString().slice(0, 10);
@@ -24,7 +24,10 @@ export default defineTool({
 
     if (bookings.error || events.error || enquiries.error) {
       return deniedResult(
-        bookings.error?.message ?? events.error?.message ?? enquiries.error?.message ?? "Read failed",
+        bookings.error?.message ??
+          events.error?.message ??
+          enquiries.error?.message ??
+          "Read failed",
       );
     }
 

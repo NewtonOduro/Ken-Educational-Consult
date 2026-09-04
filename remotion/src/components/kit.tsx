@@ -60,8 +60,7 @@ export const Backdrop: React.FC<{ tone?: "deep" | "navy" | "light" }> = ({ tone 
 export const Vignette: React.FC = () => (
   <AbsoluteFill
     style={{
-      background:
-        "radial-gradient(120% 90% at 50% 50%, transparent 45%, rgba(2,7,18,0.55) 100%)",
+      background: "radial-gradient(120% 90% at 50% 50%, transparent 45%, rgba(2,7,18,0.55) 100%)",
     }}
   />
 );
@@ -441,8 +440,26 @@ export const Logo: React.FC<{ progress: number; scale?: number }> = ({ progress,
             stroke={C.gold}
             strokeWidth="2"
           />
-          <ellipse cx="58" cy="58" rx="52" ry="20" fill="none" stroke={C.goldLight} strokeWidth="1.4" opacity="0.75" />
-          <ellipse cx="58" cy="58" rx="22" ry="52" fill="none" stroke={C.goldLight} strokeWidth="1.4" opacity="0.75" />
+          <ellipse
+            cx="58"
+            cy="58"
+            rx="52"
+            ry="20"
+            fill="none"
+            stroke={C.goldLight}
+            strokeWidth="1.4"
+            opacity="0.75"
+          />
+          <ellipse
+            cx="58"
+            cy="58"
+            rx="22"
+            ry="52"
+            fill="none"
+            stroke={C.goldLight}
+            strokeWidth="1.4"
+            opacity="0.75"
+          />
           <path
             d="M22 66 C40 40 76 40 94 66"
             fill="none"
@@ -466,7 +483,7 @@ export const Logo: React.FC<{ progress: number; scale?: number }> = ({ progress,
             textShadow: `0 0 ${18 + glow * 26}px rgba(245,222,139,0.45)`,
           }}
         >
-          PACIFIC <Gold>EDU</Gold> CONSULT
+          Ken <Gold>Educational</Gold> Consult
         </div>
         <div
           style={{
@@ -512,7 +529,9 @@ export const MapDots: React.FC<{ opacity?: number }> = ({ opacity = 0.35 }) => {
           const nx = (c / cols) * 2 - 1;
           const ny = (r / rows) * 2 - 1;
           const land =
-            Math.sin(nx * 5.2 + ny * 2.1) + Math.cos(ny * 4.4 - nx * 1.7) + rand(r * cols + c) * 0.8;
+            Math.sin(nx * 5.2 + ny * 2.1) +
+            Math.cos(ny * 4.4 - nx * 1.7) +
+            rand(r * cols + c) * 0.8;
           if (land < 0.85) return null;
           return <circle key={`${r}-${c}`} cx={x} cy={y} r="2.6" fill="rgba(156,203,255,0.75)" />;
         }),

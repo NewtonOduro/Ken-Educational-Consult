@@ -1,7 +1,6 @@
 import { Facebook, Globe2, Instagram, Linkedin, Twitter } from "lucide-react";
 import { FOOTER_LINKS, SERVICES } from "@/lib/site-content";
 
-
 export function SiteFooter() {
   return (
     <footer className="bg-background border-t border-border">
@@ -12,7 +11,7 @@ export function SiteFooter() {
               <Globe2 className="size-5 text-gold" />
             </span>
             <span className="font-display text-base font-bold">
-              PACIFIC <span className="text-gold">EDU</span> CONSULT
+              Ken <span className="text-gold">Educational</span> Consult
             </span>
           </div>
           <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
@@ -31,14 +30,13 @@ export function SiteFooter() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`PACIFIC EDU CONSULT on ${label}`}
+                aria-label={`Ken Educational Consult on ${label}`}
                 className="bg-muted hover:bg-primary hover:text-primary-foreground grid size-9 place-items-center rounded-lg transition-colors"
               >
                 <Icon className="size-4" />
               </a>
             ))}
           </div>
-
         </div>
 
         <div>
@@ -72,12 +70,11 @@ export function SiteFooter() {
             ))}
           </ul>
         </div>
-
       </div>
 
       <div className="border-t border-border">
         <div className="text-muted-foreground mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-xs sm:flex-row sm:items-center sm:justify-between md:px-6">
-          <p>© {new Date().getFullYear()} PACIFIC EDU CONSULT</p>
+          <p>© {new Date().getFullYear()} Ken Educational Consult</p>
           <p>Study Abroad Ghana • Visa Assistance • Travel Agency Kumasi</p>
         </div>
       </div>

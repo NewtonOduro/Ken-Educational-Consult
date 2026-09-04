@@ -13,7 +13,6 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
 
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -79,22 +78,44 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PACIFIC EDU CONSULT | Study Abroad & Travel, Kumasi Ghana" },
+      { title: "Ken Educational Consult | Study Abroad & Travel, Kumasi Ghana" },
       {
         name: "description",
         content:
-          "PACIFIC EDU CONSULT — study abroad, visa assistance and travel services in Kumasi, Ghana.",
+          "Ken Educational Consult — study abroad, visa assistance and travel services in Kumasi, Ghana.",
       },
-      { name: "author", content: "PACIFIC EDU CONSULT" },
-      { property: "og:site_name", content: "PACIFIC EDU CONSULT" },
+      { name: "author", content: "Ken Educational Consult" },
+      { property: "og:site_name", content: "Ken Educational Consult" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "PACIFIC EDU CONSULT | Study Abroad & Travel, Kumasi Ghana" },
-      { name: "twitter:title", content: "PACIFIC EDU CONSULT | Study Abroad & Travel, Kumasi Ghana" },
-      { property: "og:description", content: "PACIFIC EDU CONSULT — study abroad, visa assistance and travel services in Kumasi, Ghana." },
-      { name: "twitter:description", content: "PACIFIC EDU CONSULT — study abroad, visa assistance and travel services in Kumasi, Ghana." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ec6fedb-d089-410e-8627-ab6891203674/id-preview-597c7388--dbe897f0-6aff-451a-8b9d-138f6c06348a.lovable.app-1785717611231.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ec6fedb-d089-410e-8627-ab6891203674/id-preview-597c7388--dbe897f0-6aff-451a-8b9d-138f6c06348a.lovable.app-1785717611231.png" },
+      {
+        property: "og:title",
+        content: "Ken Educational Consult | Study Abroad & Travel, Kumasi Ghana",
+      },
+      {
+        name: "twitter:title",
+        content: "Ken Educational Consult | Study Abroad & Travel, Kumasi Ghana",
+      },
+      {
+        property: "og:description",
+        content:
+          "Ken Educational Consult — study abroad, visa assistance and travel services in Kumasi, Ghana.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ken Educational Consult — study abroad, visa assistance and travel services in Kumasi, Ghana.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ec6fedb-d089-410e-8627-ab6891203674/id-preview-597c7388--dbe897f0-6aff-451a-8b9d-138f6c06348a.lovable.app-1785717611231.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ec6fedb-d089-410e-8627-ab6891203674/id-preview-597c7388--dbe897f0-6aff-451a-8b9d-138f6c06348a.lovable.app-1785717611231.png",
+      },
     ],
     links: [
       {
@@ -143,10 +164,6 @@ function RootComponent() {
   );
 }
 
-
-
-
-
 // import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // import {
 //   Outlet,
@@ -161,7 +178,6 @@ function RootComponent() {
 // import appCss from "../styles.css?url";
 // import { reportLovableError } from "../lib/lovable-error-reporting";
 // import { Toaster } from "@/components/ui/sonner";
-
 
 // function NotFoundComponent() {
 //   return (
@@ -228,20 +244,20 @@ function RootComponent() {
 //     meta: [
 //       { charSet: "utf-8" },
 //       { name: "viewport", content: "width=device-width, initial-scale=1" },
-//       { title: "PACIFIC EDU CONSULT | Study Abroad & Travel, Kumasi Ghana" },
+//       { title: "Ken Educational Consult | Study Abroad & Travel, Kumasi Ghana" },
 //       {
 //         name: "description",
 //         content:
-//           "PACIFIC EDU CONSULT — study abroad, visa assistance and travel services in Kumasi, Ghana.",
+//           "Ken Educational Consult — study abroad, visa assistance and travel services in Kumasi, Ghana.",
 //       },
-//       { name: "author", content: "PACIFIC EDU CONSULT" },
-//       { property: "og:site_name", content: "PACIFIC EDU CONSULT" },
+//       { name: "author", content: "Ken Educational Consult" },
+//       { property: "og:site_name", content: "Ken Educational Consult" },
 //       { property: "og:type", content: "website" },
 //       { name: "twitter:card", content: "summary_large_image" },
-//       { property: "og:title", content: "PACIFIC EDU CONSULT | Study Abroad & Travel, Kumasi Ghana" },
-//       { name: "twitter:title", content: "PACIFIC EDU CONSULT | Study Abroad & Travel, Kumasi Ghana" },
-//       { property: "og:description", content: "PACIFIC EDU CONSULT — study abroad, visa assistance and travel services in Kumasi, Ghana." },
-//       { name: "twitter:description", content: "PACIFIC EDU CONSULT — study abroad, visa assistance and travel services in Kumasi, Ghana." },
+//       { property: "og:title", content: "Ken Educational Consult | Study Abroad & Travel, Kumasi Ghana" },
+//       { name: "twitter:title", content: "Ken Educational Consult | Study Abroad & Travel, Kumasi Ghana" },
+//       { property: "og:description", content: "Ken Educational Consult — study abroad, visa assistance and travel services in Kumasi, Ghana." },
+//       { name: "twitter:description", content: "Ken Educational Consult — study abroad, visa assistance and travel services in Kumasi, Ghana." },
 //       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ec6fedb-d089-410e-8627-ab6891203674/id-preview-597c7388--dbe897f0-6aff-451a-8b9d-138f6c06348a.lovable.app-1785717611231.png" },
 //       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ec6fedb-d089-410e-8627-ab6891203674/id-preview-597c7388--dbe897f0-6aff-451a-8b9d-138f6c06348a.lovable.app-1785717611231.png" },
 //     ],
@@ -291,4 +307,3 @@ function RootComponent() {
 //     </QueryClientProvider>
 //   );
 // }
-

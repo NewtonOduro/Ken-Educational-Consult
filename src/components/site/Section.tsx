@@ -16,12 +16,7 @@ export function SectionHeading({
   inverted?: boolean;
 }) {
   return (
-    <div
-      className={cn(
-        "max-w-2xl",
-        align === "center" ? "mx-auto text-center" : "",
-      )}
-    >
+    <div className={cn("max-w-2xl", align === "center" ? "mx-auto text-center" : "")}>
       <p className={cn("eyebrow", inverted && "text-gold")}>
         <span className="gold-rule w-6" /> {eyebrow}
       </p>

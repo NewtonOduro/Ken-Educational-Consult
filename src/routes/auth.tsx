@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const TITLE = "Staff sign in | PACIFIC EDU CONSULT";
+const TITLE = "Staff sign in | Ken Educational Consult";
 const DESCRIPTION =
-  "Secure sign in for PACIFIC EDU CONSULT staff to access the internal conversion dashboard.";
+  "Secure sign in for Ken Educational Consult staff to access the internal conversion dashboard.";
 
 /** Only same-origin relative paths may be used as a post-sign-in destination. */
 function safeNext(value: unknown): string | null {
@@ -61,14 +61,13 @@ function AuthPage() {
     void navigate({ to: "/dashboard" });
   }
 
-
   return (
     <div className="bg-mist flex min-h-screen items-center justify-center px-5 py-16">
       <div className="bg-card w-full max-w-md rounded-3xl border border-border p-8 shadow-[var(--shadow-soft)]">
         <Lock className="text-gold size-6" />
         <h1 className="font-display mt-4 text-2xl font-bold">Staff sign in</h1>
         <p className="text-muted-foreground mt-2 text-sm">
-          The conversion dashboard is restricted to PACIFIC EDU CONSULT team accounts.
+          The conversion dashboard is restricted to Ken Educational Consult team accounts.
         </p>
 
         <form onSubmit={onSubmit} className="mt-6 space-y-4">

@@ -17,9 +17,9 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { FloatingActions } from "@/components/site/FloatingActions";
 import { BUSINESS, FAQS } from "@/lib/site-content";
 
-const TITLE = "PACIFIC EDU CONSULT | Study Abroad & Visa Assistance, Kumasi";
+const TITLE = "Ken Educational Consult | Study Abroad & Visa Assistance, Kumasi";
 const DESCRIPTION =
-  "Study abroad, visa assistance and travel services in Kumasi, Ghana. University admissions, student visas, IELTS prep and flight booking with PACIFIC EDU CONSULT.";
+  "Study abroad, visa assistance and travel services in Kumasi, Ghana. University admissions, student visas, IELTS prep and flight booking with Ken Educational Consult.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

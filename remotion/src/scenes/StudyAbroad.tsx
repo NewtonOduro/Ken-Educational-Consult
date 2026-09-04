@@ -148,8 +148,18 @@ export const StudyAbroad: React.FC = () => {
                 }}
               >
                 <svg width="86" height="66" viewBox="0 0 86 66">
-                  <path d="M43 6 L82 24 L43 42 L4 24 Z" fill={C.navyDeep} stroke={C.gold} strokeWidth="2" />
-                  <path d="M22 32 L22 52 C30 60 56 60 64 52 L64 32" fill="none" stroke={C.gold} strokeWidth="2.6" />
+                  <path
+                    d="M43 6 L82 24 L43 42 L4 24 Z"
+                    fill={C.navyDeep}
+                    stroke={C.gold}
+                    strokeWidth="2"
+                  />
+                  <path
+                    d="M22 32 L22 52 C30 60 56 60 64 52 L64 32"
+                    fill="none"
+                    stroke={C.gold}
+                    strokeWidth="2.6"
+                  />
                   <path d="M78 26 L78 48" stroke={C.goldLight} strokeWidth="2.4" />
                   <circle cx="78" cy="52" r="5" fill={C.goldLight} />
                 </svg>

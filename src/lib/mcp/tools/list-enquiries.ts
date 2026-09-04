@@ -13,7 +13,7 @@ export default defineTool({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: async ({ limit }, ctx) => {
     const role = await resolveStaffRole(ctx);
-    if (!role) return deniedResult("Only PACIFIC EDU CONSULT team accounts can use this tool.");
+    if (!role) return deniedResult("Only Ken Educational Consult team accounts can use this tool.");
     if (role !== "admin") {
       return deniedResult("Enquiry contact details are restricted to admin accounts.");
     }

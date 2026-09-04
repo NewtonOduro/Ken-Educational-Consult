@@ -5,9 +5,15 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 
 type OAuthApi = {
-  getAuthorizationDetails: (id: string) => Promise<{ data: AuthorizationDetails | null; error: { message: string } | null }>;
-  approveAuthorization: (id: string) => Promise<{ data: AuthorizationDetails | null; error: { message: string } | null }>;
-  denyAuthorization: (id: string) => Promise<{ data: AuthorizationDetails | null; error: { message: string } | null }>;
+  getAuthorizationDetails: (
+    id: string,
+  ) => Promise<{ data: AuthorizationDetails | null; error: { message: string } | null }>;
+  approveAuthorization: (
+    id: string,
+  ) => Promise<{ data: AuthorizationDetails | null; error: { message: string } | null }>;
+  denyAuthorization: (
+    id: string,
+  ) => Promise<{ data: AuthorizationDetails | null; error: { message: string } | null }>;
 };
 
 type AuthorizationDetails = {
@@ -23,7 +29,8 @@ function oauthApi(): OAuthApi {
 export const Route = createFileRoute("/.lovable/oauth/consent")({
   ssr: false,
   validateSearch: (search: Record<string, unknown>) => ({
-    authorization_id: typeof search["authorization_id"] === "string" ? search["authorization_id"] : "",
+    authorization_id:
+      typeof search["authorization_id"] === "string" ? search["authorization_id"] : "",
   }),
   beforeLoad: async ({ search, location }) => {
     if (!search.authorization_id) throw new Error("Missing authorization_id");
@@ -81,7 +88,7 @@ function Consent() {
       <div className="bg-card w-full max-w-md rounded-3xl border border-border p-8 shadow-[var(--shadow-soft)]">
         <ShieldCheck className="text-gold size-6" />
         <h1 className="font-display mt-4 text-2xl font-bold">
-          Connect {clientName} to PACIFIC EDU CONSULT
+          Connect {clientName} to Ken Educational Consult
         </h1>
         <p className="text-muted-foreground mt-3 text-sm">
           {clientName} will be able to use the consultancy tools as you — checking consultation
@@ -97,7 +104,12 @@ function Consent() {
           <Button variant="navy" className="flex-1" disabled={busy} onClick={() => decide(true)}>
             {busy ? <Loader2 className="size-4 animate-spin" /> : "Approve"}
           </Button>
-          <Button variant="outline" className="flex-1" disabled={busy} onClick={() => decide(false)}>
+          <Button
+            variant="outline"
+            className="flex-1"
+            disabled={busy}
+            onClick={() => decide(false)}
+          >
             Deny
           </Button>
         </div>

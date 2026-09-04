@@ -25,7 +25,7 @@ const SERVICES = [
 const CONTACT = [
   { k: "Call or WhatsApp", v: "+233 55 000 0000" },
   { k: "Office", v: "Atonsu S' Line Junction, Kumasi" },
-  { k: "Online", v: "pacificeduconsult.com" },
+  { k: "Online", v: "keneducationalconsult.com" },
 ];
 
 export const Cta: React.FC = () => {

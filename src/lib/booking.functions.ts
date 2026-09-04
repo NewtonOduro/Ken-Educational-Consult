@@ -36,17 +36,23 @@ export const getBookedSlots = createServerFn({ method: "GET" })
     return (rows ?? []).map((r) => ({ slot_date: r.slot_date, slot_time: r.slot_time }));
   });
 
-const createSchema = () => z.object({
-  fullName: z.string().trim().min(2).max(100),
-  email: z.string().trim().email().max(255),
-  phone: z.string().trim().min(7).max(25).regex(/^[0-9+\-\s()]+$/),
-  consultationType: z.string().trim().min(2).max(120),
-  destination: z.string().trim().max(120).optional().nullable(),
-  meetingMode: z.enum(["in_person", "whatsapp", "phone"]),
-  slotDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-  slotTime: z.string().regex(/^\d{2}:\d{2}$/),
-  notes: z.string().trim().max(1000).optional().nullable(),
-});
+const createSchema = () =>
+  z.object({
+    fullName: z.string().trim().min(2).max(100),
+    email: z.string().trim().email().max(255),
+    phone: z
+      .string()
+      .trim()
+      .min(7)
+      .max(25)
+      .regex(/^[0-9+\-\s()]+$/),
+    consultationType: z.string().trim().min(2).max(120),
+    destination: z.string().trim().max(120).optional().nullable(),
+    meetingMode: z.enum(["in_person", "whatsapp", "phone"]),
+    slotDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    slotTime: z.string().regex(/^\d{2}:\d{2}$/),
+    notes: z.string().trim().max(1000).optional().nullable(),
+  });
 
 /**
  * Booking creation runs server-side with strict validation, so the bookings

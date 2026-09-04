@@ -9,7 +9,7 @@ export function FloatingActions() {
       <a
         href={BUSINESS.phoneHref}
         onClick={() => track("call_click", "floating button")}
-        aria-label="Call PACIFIC EDU CONSULT"
+        aria-label="Call Ken Educational Consult"
         className="surface-navy grid size-12 place-items-center rounded-full shadow-[var(--shadow-lift)] transition-transform hover:scale-110 sm:hidden"
       >
         <Phone className="size-5 text-gold" />
@@ -27,4 +27,3 @@ export function FloatingActions() {
     </div>
   );
 }
-

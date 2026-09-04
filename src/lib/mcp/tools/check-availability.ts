@@ -14,7 +14,7 @@ export default defineTool({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: async ({ from_date, to_date }, ctx) => {
     const role = await resolveStaffRole(ctx);
-    if (!role) return deniedResult("Only PACIFIC EDU CONSULT team accounts can use this tool.");
+    if (!role) return deniedResult("Only Ken Educational Consult team accounts can use this tool.");
 
     const supabase = supabaseForUser(ctx);
     const { data, error } = await supabase

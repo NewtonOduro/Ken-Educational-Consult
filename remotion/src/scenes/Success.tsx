@@ -1,6 +1,15 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
-import { Backdrop, Eyebrow, Flare, Gold, Headline, Particles, rand, useIn } from "../components/kit";
+import {
+  Backdrop,
+  Eyebrow,
+  Flare,
+  Gold,
+  Headline,
+  Particles,
+  rand,
+  useIn,
+} from "../components/kit";
 import { C } from "../theme";
 import { BODY, DISPLAY } from "../fonts";
 

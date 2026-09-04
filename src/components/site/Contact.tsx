@@ -65,7 +65,7 @@ export function Contact() {
 
     setErrors({});
     const v = parsed.data;
-    const text = `New enquiry — PACIFIC EDU CONSULT\n\nName: ${v.name}\nEmail: ${v.email}\nPhone: ${v.phone}\nDestination: ${v.country}\nService: ${v.service}\n\n${v.message}`;
+    const text = `New enquiry — Ken Educational Consult\n\nName: ${v.name}\nEmail: ${v.email}\nPhone: ${v.phone}\nDestination: ${v.country}\nService: ${v.service}\n\n${v.message}`;
     track("enquiry_submit", v.service);
     openWhatsApp(undefined, "enquiry form", text);
     toast.success("Thank you! Your enquiry is ready to send on WhatsApp.");
@@ -160,7 +160,7 @@ export function Contact() {
             <div className="bg-card overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
               <iframe
                 src={BUSINESS.mapsEmbed}
-                title="PACIFIC EDU CONSULT office location in Kumasi, Ghana"
+                title="Ken Educational Consult office location in Kumasi, Ghana"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="h-72 w-full border-0"
@@ -174,7 +174,6 @@ export function Contact() {
                 <MapPin className="text-gold size-4" /> Get directions to our office
               </a>
             </div>
-
           </div>
 
           <form
@@ -202,7 +201,12 @@ export function Contact() {
                 />
               </Field>
               <Field label="Phone / WhatsApp" error={errors.phone}>
-                <Input id="phone" name="phone" maxLength={25} placeholder="Your phone / WhatsApp number" />
+                <Input
+                  id="phone"
+                  name="phone"
+                  maxLength={25}
+                  placeholder="Your phone / WhatsApp number"
+                />
               </Field>
               <Field label="Destination" error={errors.country}>
                 <Select value={country} onValueChange={setCountry}>

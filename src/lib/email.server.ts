@@ -14,7 +14,7 @@ export async function sendEmail({ to, subject, html }: SendArgs): Promise<boolea
   const apiKey = process.env["RESEND_API_KEY"];
   if (!apiKey) return false;
 
-  const from = process.env["EMAIL_FROM"] ?? "PACIFIC EDU CONSULT <onboarding@resend.dev>";
+  const from = process.env["EMAIL_FROM"] ?? "Ken Educational Consult <onboarding@resend.dev>";
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
@@ -63,7 +63,7 @@ export function bookingConfirmationHtml(args: {
     <tr><td align="center">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden">
         <tr><td style="background:#0b1220;padding:24px 28px;color:#ffffff">
-          <div style="font-size:18px;font-weight:700">PACIFIC <span style="color:#d4af37">EDU</span> CONSULT</div>
+          <div style="font-size:18px;font-weight:700">Ken <span style="color:#d4af37">Educational</span> Consult</div>
           <div style="font-size:12px;opacity:.75;margin-top:4px">Study • Travel • Global Opportunities</div>
         </td></tr>
         <tr><td style="padding:28px">

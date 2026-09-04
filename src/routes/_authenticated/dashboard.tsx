@@ -26,10 +26,9 @@ import { getDashboardSummary, type DashboardSummary } from "@/lib/dashboard.func
 import { EVENT_LABELS } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 
-
-const TITLE = "Conversion Dashboard | PACIFIC EDU CONSULT";
+const TITLE = "Conversion Dashboard | Ken Educational Consult";
 const DESCRIPTION =
-  "Summary of consultation bookings, CTA clicks, WhatsApp opens, call taps and enquiry submissions for PACIFIC EDU CONSULT.";
+  "Summary of consultation bookings, CTA clicks, WhatsApp opens, call taps and enquiry submissions for Ken Educational Consult.";
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
@@ -70,7 +69,6 @@ function Dashboard() {
     retry: false,
   });
 
-
   return (
     <div className="bg-mist min-h-screen">
       <header className="surface-navy">
@@ -98,7 +96,6 @@ function Dashboard() {
               Sign out
             </Button>
           </div>
-
         </div>
       </header>
 
@@ -204,8 +201,20 @@ function Dashboard() {
                     />
                     <YAxis allowDecimals={false} tick={{ fontSize: 11 }} />
                     <Tooltip />
-                    <Line type="monotone" dataKey="events" stroke="#1e3a8a" strokeWidth={2} dot={false} />
-                    <Line type="monotone" dataKey="bookings" stroke="#c9a227" strokeWidth={2} dot={false} />
+                    <Line
+                      type="monotone"
+                      dataKey="events"
+                      stroke="#1e3a8a"
+                      strokeWidth={2}
+                      dot={false}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="bookings"
+                      stroke="#c9a227"
+                      strokeWidth={2}
+                      dot={false}
+                    />
                   </LineChart>
                 </ResponsiveContainer>
                 <p className="text-muted-foreground mt-3 text-xs">

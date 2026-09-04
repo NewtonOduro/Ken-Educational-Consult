@@ -6,7 +6,6 @@ import { BUSINESS, NAV_LINKS } from "@/lib/site-content";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
-
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -46,7 +45,7 @@ export function SiteHeader() {
             </span>
             <span className="leading-tight">
               <span className="font-display block text-base font-bold tracking-tight sm:text-lg">
-                PACIFIC <span className="text-gold">EDU</span> CONSULT
+                Ken <span className="text-gold">Educational</span> Consult
               </span>
               <span className="text-muted-foreground text-[10px] font-semibold tracking-[0.2em] uppercase">
                 Kumasi • Ghana
@@ -110,8 +109,6 @@ export function SiteHeader() {
                 </nav>
               </SheetContent>
             </Sheet>
-
-
           </div>
         </div>
       </header>
