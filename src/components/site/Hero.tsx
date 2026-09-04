@@ -34,7 +34,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden">
+    <section id="top" className="relative isolate min-h-[100svh] overflow-hidden">
       <video
         ref={videoRef}
         src="/airport.mp4"
@@ -59,7 +59,7 @@ export function Hero() {
             videoRef.current.play().catch((err) => console.log("Replay error:", err));
           }
         }}
-        className="pointer-events-none absolute inset-0 -z-20 size-full object-cover object-center"
+        className="pointer-events-none absolute inset-0 -z-20 h-full w-full min-h-[100svh] object-cover object-center"
       />
       <div className="from-black/95 via-black/80 to-black/60 absolute inset-0 -z-10 bg-gradient-to-r" />
 
